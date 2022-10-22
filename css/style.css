@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/*Start Header Section*/
+header {
+    height: 95vh;
+    /* background-image: url("./../asset/imgs/img/banner/banner8.jpg"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    transition: all 2.5s linear;
+}
+
+/*Start Nav Bar*/
+.navbar {
+    background: linear-gradient(
+            to right,rgba(0,0,0,1), rgba(0,0,0,0.7)
+    );
+    position: relative;
+    z-index: 10;
+}
+
+.nav-link {
+    font-size: 14px;
+    color: #fff !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.dropdowns {
+    position: relative;
+}
+
+.drop-btn {
+    background: none !important;
+}
+
+.dropdown-contents {
+    width: 250px;
+    background-color: #f6f6f6;
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+
+.dropdown-contents .search {
+    width: 100%;
+    background-image: url("./../asset/imgs/img/icon/searchicon.png");
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 5px 10px 40px;
+}
+
+.dropdown-contents .search:focus {
+    outline: none;
+}
+
+.dropdown-contents a {
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.dropdowns a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-contents.show{
+    display: block;
+}
+
+.dropdown-item {
+    font-size: 14px !important;
+}
+
+/*End Nav Bar*/
+
+/*Start Banner Section */
+.banners {
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-headers {
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.3)
+    );
+    border: 2px dashed #fff;
+    padding: 20px;
+    box-shadow: 10px 10px 100px 20px #000;
+    animation-name: ban-animation;
+    animation-duration: 2s;
+}
+
+.banner-paragraphs {
+    animation-name: ban-animation;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes ban-animation {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+/*End Banner Section */
+/*End Header Section*/
