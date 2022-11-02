@@ -129,3 +129,52 @@ header {
 }
 /*End Banner Section */
 /*End Header Section*/
+
+/* Start Our Service Section */
+.icon-boxes {
+    background-color: #fff;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.2);
+    padding: 50px 20px;
+    position: relative;
+}
+
+.icon-boxes::before {
+    content: "";
+    width: 100%;
+    height: 3%;
+    background-color: purple;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    transition: height 0.5s;
+}
+
+.icon-boxes:hover::before {
+    height: 5%;
+}
+
+.icons {
+    width: 70px;
+    height: 70px;
+    background-color: purple;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: calc(50% - 35px);
+    top: -35px;
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.icons i {
+    transform: rotate(-45deg);
+}
+
+.icon-boxes:hover .icons {
+    background: none;
+    color: purple;
+    border: 2px solid purple;
+}
+/* End Our Service Section */
