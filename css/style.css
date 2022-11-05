@@ -20,9 +20,7 @@ header {
 
 /*Start Nav Bar*/
 .navbar {
-    background: linear-gradient(
-            to right,rgba(0,0,0,1), rgba(0,0,0,0.7)
-    );
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7));
     position: relative;
     z-index: 10;
 }
@@ -48,6 +46,8 @@ header {
     width: 250px;
     background-color: #f6f6f6;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10;
     display: none;
 }
@@ -78,7 +78,7 @@ header {
     background-color: #ddd;
 }
 
-.dropdown-contents.show{
+.dropdown-contents.show {
     display: block;
 }
 
@@ -99,10 +99,8 @@ header {
 }
 
 .banner-headers {
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.3)
-    );
+    min-width: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
     border: 2px dashed #fff;
     padding: 20px;
     box-shadow: 10px 10px 100px 20px #000;
@@ -122,18 +120,80 @@ header {
         transform: translateY(100px);
         opacity: 0;
     }
+
     to {
         transform: translate(0px);
         opacity: 1;
     }
 }
+
 /*End Banner Section */
 /*End Header Section*/
+
+/* Start Booking Section */
+.search-rooms {
+    width: 80%;
+    background: linear-gradient(to left, skyblue, steelblue);
+    padding: 10px 0;
+    margin-top: -40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search-rooms .form-control {
+    max-width: 20%;
+    display: inline;
+    margin: 10px 5px;
+    border-radius: 0%;
+    border: none;
+}
+
+.search-rooms .form-control:focus {
+    box-shadow: none;
+}
+
+.search-rooms input[type=text] {
+    width: 160px;
+    transition: width 0.5s ease-in-out;
+}
+
+.search-rooms input[type=text]:focus {
+    width: 100%;
+}
+/* End Booking Section */
+
+/* Start Room Section */
+.rows {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columns {
+    max-width: 25%;
+    padding: 0 5px;
+}
+
+.columns img {
+    width: 100%;
+    margin: 5px;
+}
+
+.columns img:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 800px) {
+    .columns {
+        max-width: 50%;
+    }
+}
+/* End Room Section */
 
 /* Start Our Service Section */
 .icon-boxes {
     background-color: #fff;
-    box-shadow: 0 3px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
     padding: 50px 20px;
     position: relative;
 }
@@ -177,4 +237,52 @@ header {
     color: purple;
     border: 2px solid purple;
 }
+
 /* End Our Service Section */
+
+/* Start Testimonials Section */
+.testimonial-container {
+    position: relative;
+}
+
+.fa-quotes {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 28px;
+    position: absolute;
+    top: 40px;
+}
+
+.fa-quote-right {
+    left: 0%;
+}
+
+.fa-quote-left {
+    right: 0%;
+}
+
+.testimonial {
+    line-height: 30px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: tomato;
+    transform-origin: left;
+    animation-name: increment-animation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes increment-animation {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* End Testimonials Section */
