@@ -1,130 +1,130 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 /*Start Header Section*/
 header {
-    height: 95vh;
-    /* background-image: url("./../asset/imgs/img/banner/banner8.jpg"); */
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    transition: all 2.5s linear;
+  height: 95vh;
+  /* background-image: url("./../asset/imgs/img/banner/banner8.jpg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  transition: all 2.5s linear;
 }
 
 /*Start Nav Bar*/
 .navbar {
-    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7));
-    position: relative;
-    z-index: 10;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7));
+  position: relative;
+  z-index: 10;
 }
 
 .nav-link {
-    font-size: 14px;
-    color: #fff !important;
+  font-size: 14px;
+  color: #fff !important;
 }
 
 .navbar-toggler:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .dropdowns {
-    position: relative;
+  position: relative;
 }
 
 .drop-btn {
-    background: none !important;
+  background: none !important;
 }
 
 .dropdown-contents {
-    width: 250px;
-    background-color: #f6f6f6;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    display: none;
+  width: 250px;
+  background-color: #f6f6f6;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: none;
 }
 
 .dropdown-contents .search {
-    width: 100%;
-    background-image: url("./../asset/imgs/img/icon/searchicon.png");
-    background-repeat: no-repeat;
-    background-position: 5px center;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 5px 10px 40px;
+  width: 100%;
+  background-image: url('./../asset/imgs/img/icon/searchicon.png');
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 5px 10px 40px;
 }
 
 .dropdown-contents .search:focus {
-    outline: none;
+  outline: none;
 }
 
 .dropdown-contents a {
-    color: #000;
-    font-size: 14px;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
 }
 
 .dropdowns a:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .dropdown-contents.show {
-    display: block;
+  display: block;
 }
 
 .dropdown-item {
-    font-size: 14px !important;
+  font-size: 14px !important;
 }
 
 /*End Nav Bar*/
 
 /*Start Banner Section */
 .banners {
-    color: #ffffff;
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .banner-headers {
-    min-width: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
-    border: 2px dashed #fff;
-    padding: 20px;
-    box-shadow: 10px 10px 100px 20px #000;
-    animation-name: ban-animation;
-    animation-duration: 2s;
+  min-width: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+  border: 2px dashed #fff;
+  padding: 20px;
+  box-shadow: 10px 10px 100px 20px #000;
+  animation-name: ban-animation;
+  animation-duration: 2s;
 }
 
 .banner-paragraphs {
-    animation-name: ban-animation;
-    animation-duration: 2s;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards;
+  animation-name: ban-animation;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
 }
 
 @keyframes ban-animation {
-    from {
-        transform: translateY(100px);
-        opacity: 0;
-    }
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
 
-    to {
-        transform: translate(0px);
-        opacity: 1;
-    }
+  to {
+    transform: translate(0px);
+    opacity: 1;
+  }
 }
 
 /*End Banner Section */
@@ -132,157 +132,157 @@ header {
 
 /* Start Booking Section */
 .search-rooms {
-    width: 80%;
-    background: linear-gradient(to left, skyblue, steelblue);
-    padding: 10px 0;
-    margin-top: -40px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  width: 80%;
+  background: linear-gradient(to left, skyblue, steelblue);
+  padding: 10px 0;
+  margin-top: -40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .search-rooms .form-control {
-    max-width: 20%;
-    display: inline;
-    margin: 10px 5px;
-    border-radius: 0%;
-    border: none;
+  max-width: 20%;
+  display: inline;
+  margin: 10px 5px;
+  border-radius: 0%;
+  border: none;
 }
 
 .search-rooms .form-control:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
-.search-rooms input[type=text] {
-    width: 160px;
-    transition: width 0.5s ease-in-out;
+.search-rooms input[type='text'] {
+  width: 160px;
+  transition: width 0.5s ease-in-out;
 }
 
-.search-rooms input[type=text]:focus {
-    width: 100%;
+.search-rooms input[type='text']:focus {
+  width: 100%;
 }
 /* End Booking Section */
 
 /* Start Room Section */
 .rows {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .columns {
-    max-width: 25%;
-    padding: 0 5px;
+  max-width: 25%;
+  padding: 0 5px;
 }
 
 .columns img {
-    width: 100%;
-    margin: 5px;
+  width: 100%;
+  margin: 5px;
 }
 
 .columns img:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 @media (max-width: 800px) {
-    .columns {
-        max-width: 50%;
-    }
+  .columns {
+    max-width: 50%;
+  }
 }
 /* End Room Section */
 
 /* Start Our Service Section */
 .icon-boxes {
-    background-color: #fff;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-    padding: 50px 20px;
-    position: relative;
+  background-color: #fff;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  padding: 50px 20px;
+  position: relative;
 }
 
 .icon-boxes::before {
-    content: "";
-    width: 100%;
-    height: 3%;
-    background-color: purple;
-    position: absolute;
-    left: 0%;
-    bottom: 0%;
-    transition: height 0.5s;
+  content: '';
+  width: 100%;
+  height: 3%;
+  background-color: purple;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  transition: height 0.5s;
 }
 
 .icon-boxes:hover::before {
-    height: 5%;
+  height: 5%;
 }
 
 .icons {
-    width: 70px;
-    height: 70px;
-    background-color: purple;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: calc(50% - 35px);
-    top: -35px;
-    transform: rotate(45deg);
-    transition: all 0.5s ease-in-out;
+  width: 70px;
+  height: 70px;
+  background-color: purple;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: calc(50% - 35px);
+  top: -35px;
+  transform: rotate(45deg);
+  transition: all 0.5s ease-in-out;
 }
 
 .icons i {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .icon-boxes:hover .icons {
-    background: none;
-    color: purple;
-    border: 2px solid purple;
+  background: none;
+  color: purple;
+  border: 2px solid purple;
 }
 
 /* End Our Service Section */
 
 /* Start Testimonials Section */
 .testimonial-container {
-    position: relative;
+  position: relative;
 }
 
 .fa-quotes {
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 28px;
-    position: absolute;
-    top: 40px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 28px;
+  position: absolute;
+  top: 40px;
 }
 
 .fa-quote-right {
-    left: 0%;
+  left: 0%;
 }
 
 .fa-quote-left {
-    right: 0%;
+  right: 0%;
 }
 
 .testimonial {
-    line-height: 30px;
+  line-height: 30px;
 }
 
 .progress-bar {
-    width: 100%;
-    height: 4px;
-    background-color: tomato;
-    transform-origin: left;
-    animation-name: increment-animation;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+  width: 100%;
+  height: 4px;
+  background-color: tomato;
+  transform-origin: left;
+  animation-name: increment-animation;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @keyframes increment-animation {
-    0% {
-        transform: scaleX(0);
-    }
+  0% {
+    transform: scaleX(0);
+  }
 
-    100% {
-        transform: scaleX(1);
-    }
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 /* End Testimonials Section */

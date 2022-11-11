@@ -1,11 +1,10 @@
 // Start Jquery Area
 $(document).ready(function () {
-
-    // Start Room Section
-    $(".room-popup").magnificPopup({
-        type: "image"
-    });
-    // End Room Section
+  // Start Room Section
+  $(".room-popup").magnificPopup({
+    type: "image",
+  });
+  // End Room Section
 });
 // End Jquery Area
 
@@ -13,59 +12,55 @@ $(document).ready(function () {
 // Start Header
 // Start nav bar
 function dropBtn(e) {
+  // let getDropDown = document.getElementById("my-dropdown");
+  // getDropDown.classList.toggle("show");
 
-    // let getDropDown = document.getElementById("my-dropdown");
-    // getDropDown.classList.toggle("show");
+  // undefined
+  // console.log(this);
+  // console.log(e);
 
-    // undefined
-    // console.log(this);
-    // console.log(e);
+  // console.log(e.target.nextElementSibling);
 
-    // console.log(e.target.nextElementSibling);
-
-    e.target.nextElementSibling.classList.toggle("show");
-};
+  e.target.nextElementSibling.classList.toggle("show");
+}
 
 function dropFilter() {
+  var getSearch, filter, getDropDiv, getLinks, linkValue;
 
-    var getSearch, filter, getDropDiv, getLinks, linkValue;
+  getSearch = document.getElementById("search");
+  filter = getSearch.value.toUpperCase();
+  // getDropDiv = document.getElementById("my-dropdown");
+  // getLinks = getDropDiv.getElementsByTagName("a");
+  getLinks = document.querySelectorAll(".my-dropdowns a");
 
-    getSearch = document.getElementById("search");
-    filter = getSearch.value.toUpperCase();
-    // getDropDiv = document.getElementById("my-dropdown");
-    // getLinks = getDropDiv.getElementsByTagName("a");
-    getLinks = document.querySelectorAll(".my-dropdowns a")
+  // console.log(getLinks.length);
+  // console.log(filter);
 
-    // console.log(getLinks.length);
-    // console.log(filter);
+  for (var x = 0; x < getLinks.length; x++) {
+    linkValue = getLinks[x].textContent;
+    // console.log(linkValue);
 
-    for (var x = 0; x < getLinks.length; x++) {
-
-        linkValue = getLinks[x].textContent;
-        // console.log(linkValue);
-
-        if (linkValue.toUpperCase().indexOf(filter) > -1) {
-            getLinks[x].style.display = "";
-        } else {
-            getLinks[x].style.display = "none";
-        };
-    };
-};
+    if (linkValue.toUpperCase().indexOf(filter) > -1) {
+      getLinks[x].style.display = "";
+    } else {
+      getLinks[x].style.display = "none";
+    }
+  }
+}
 // End nav bar
 
 // Start auto background
 function* genFun() {
+  var index = 8;
 
-    var index = 8;
+  while (true) {
+    yield index++;
 
-    while (true) {
-        yield index++;
-
-        if (index > 13) {
-            index = 8;
-        };
-    };
-};
+    if (index > 13) {
+      index = 8;
+    }
+  }
+}
 
 var getGen = genFun();
 // console.log(getGen.next().value);
@@ -81,69 +76,91 @@ var getHeader = document.querySelector("header");
 // getHeader.style.backgroundImage = `url("./asset/imgs/img/banner/banner${getGen.next().value}.jpg")`;
 
 function autoLoad() {
-    // console.log(getGen.next().value);
+  // console.log(getGen.next().value);
 
-    getHeader.style.backgroundImage = `
+  getHeader.style.backgroundImage = `
     url("./asset/imgs/img/banner/banner${getGen.next().value}.jpg")`;
-};
+}
 
 autoLoad();
 
 setInterval(autoLoad, 2500);
-// End auto background 
+// End auto background
 
 // End Header
 
 // Start Testimonials Section
-const getCompanyName = document.querySelector("company-name");
+const getCompanyName = document.querySelector(".company-name");
 const getRole = document.querySelector(".role");
 const getTestimonial = document.querySelector(".testimonial");
 
-const testimonialDatas = [
-    {
-        name: "Rich Star Restaurant",
-        position: "Our Outlet",
-        text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit, atque at deleniti cum
+const testimonialData = [
+  {
+    name: "Rich Star Restaurant",
+    position: "Our Outlet",
+    text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit, atque at deleniti cum
                         unde reiciendis rem libero ullam magni, temporibus distinctio blanditiis autem? Possimus earum
-                        sequi temporibus nam consectetur!`
-    },
-    {
-        name: "Rich Star Restaurant",
-        position: "Our Outlet",
-        text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit, atque at deleniti cum
+                        sequi temporibus nam consectetur!`,
+  },
+  {
+    name: "Rich Star Restaurant",
+    position: "Our Outlet",
+    text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit, atque at deleniti cum
                         unde reiciendis rem libero ullam magni, temporibus distinctio blanditiis autem? Possimus earum
-                        sequi temporibus nam consectetur!`
-    },
-    {
-        name: "48 Sky Bar Cafe",
-        position: "Our Partner",
-        text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit, atque at deleniti cum
+                        sequi temporibus nam consectetur!`,
+  },
+  {
+    name: "48 Sky Bar Cafe",
+    position: "Our Partner",
+    text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit, atque at deleniti cum
                         unde reiciendis rem libero ullam magni, temporibus distinctio blanditiis autem? Possimus earum
-                        sequi temporibus nam consectetur!`
-    },
-    {
-        name: "Cool Land Swimming Pool",
-        position: "Our Outlet",
-        text: `Lorem ipsum Branch sit, amet consectetur adipisicing elit. Illum, odit, atque at deleniti cum
+                        sequi temporibus nam consectetur!`,
+  },
+  {
+    name: "Cool Land Swimming Pool",
+    position: "Our Outlet",
+    text: `Lorem ipsum Branch sit, amet consectetur adipisicing elit. Illum, odit, atque at deleniti cum
                         unde reiciendis rem libero ullam magni, temporibus distinctio blanditiis autem? Possimus earum
-                        sequi temporibus nam consectetur!`
-    },
-    {
-        name: "Chaung Thar SPA",
-        position: "Our Business",
-        text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit, atque at deleniti cum
+                        sequi temporibus nam consectetur!`,
+  },
+  {
+    name: "Chaung Thar SPA",
+    position: "Our Business",
+    text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit, atque at deleniti cum
                         unde reiciendis rem libero ullam magni, temporibus distinctio blanditiis autem? Possimus earum
-                        sequi temporibus nam consectetur!`
-    },
+                        sequi temporibus nam consectetur!`,
+  },
 ];
 
-let idx = 0;
+// console.log(testimonialData[0].name);
+
+let idx = 1;
 
 function updateTestimonial() {
+  // getCompanyName.textContent = testimonialData[idx].name;
+  // getRole.textContent = testimonialData[idx].position;
+  // getTestimonial.textContent = testimonialData[idx].text;
 
+  const { name, position, text } = testimonialData[idx];
+  // console.log(name);
+  // console.log(position);
+  // console.log(text);
+
+  getCompanyName.textContent = name;
+  getRole.textContent = position;
+  getTestimonial.textContent = text;
+
+  idx++;
+
+  if (idx > testimonialData.length - 1) {
+    idx = 0;
+  }
 }
 
+updateTestimonial();
+
 setInterval(updateTestimonial, 10000);
+
 // End Testimonials Section
 
 // End Javascript Area
